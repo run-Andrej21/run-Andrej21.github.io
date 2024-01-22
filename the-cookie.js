@@ -35,6 +35,10 @@ function setCookie(cname, cvalue, exdays) {
         var showFS = document.querySelector(".FS");
 
         showFS.style.display ="";
+
+        var the_name = document.getElementById("test_text_id").value;
+
+        setCookie("username", the_name, 30);
         
        
           
