@@ -8,11 +8,15 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
 
   });
  
-    document.getElementById("FS_form_id").addEventListener("submit", function(event) {
+  document.getElementById("FS_form_id").addEventListener("submit", function(event) {
     event.preventDefault();
-    var the_name = document.getElementById("test_text_id").value;
-    setCookie("username", the_name, 30);
-    console.log(the_name);
+    var cname = document.getElementById("test_text_id").value;
+    setCookie("username", cname, 365);
+    console.log(cname);
+    console.log(document.cookie)
+    location.reload();
     });
 
-    location.reload();
+
+
+   
