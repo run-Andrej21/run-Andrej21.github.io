@@ -7,11 +7,12 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
   FS.style.display = "none";
 
   });
-
-  function getForm(event) {
+ 
+    document.getElementById("FS_form_id").addEventListener("submit", function(event) {
     event.preventDefault();
-    var form = document.getElementById("test_text_id").value;
-    console.log(form)
+    var the_name = document.getElementById("test_text_id").value;
+    setCookie("username", the_name, 30);
+    console.log(the_name);
+    });
 
-
-  }
+    location.reload();
