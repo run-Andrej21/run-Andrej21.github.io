@@ -30,13 +30,12 @@ function setCookie(cname, cvalue, exdays) {
         
         container.style.display = ""
         document.getElementById("textname").textContent = ("Hello, " + username);
+
       } else {
   
         var showFS = document.querySelector(".FS");
 
-        showFS.style.display ="";
-        
-       
+        showFS.style.display ="";     
           
       }});
 

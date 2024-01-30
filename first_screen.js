@@ -7,11 +7,16 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
   FS.style.display = "none";
 
   });
-
-  function getForm(event) {
+ 
+  document.getElementById("FS_form_id").addEventListener("submit", function(event) {
     event.preventDefault();
-    var form = document.getElementById("test_text_id").value;
-    console.log(form)
+    var cname = document.getElementById("test_text_id").value;
+    setCookie("username", cname, 365);
+    console.log(cname);
+    console.log(document.cookie)
+    location.reload();
+    });
 
 
-  }
+
+   
