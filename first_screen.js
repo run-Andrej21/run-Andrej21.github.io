@@ -17,6 +17,15 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
     location.reload();
     });
 
+  var elem = document.documentElement;
+
+  function FullScreen() {
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    }
+  }
+
 
 
    
