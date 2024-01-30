@@ -1,6 +1,6 @@
 # Nex-NexTab-1.0
 
-Git stuff
+========= Git stuff =========
 
 1. get git
 2. get extansion "github pull request and issues"
@@ -8,8 +8,7 @@ Git stuff
 4. "git config --global user.name run-Nexus21"
 5. "git config --global user.email run-Nexus21@gmail.com"
 
-=======
-How to NexTab
+======= How to NexTab =======
 
 1. Download all viruses and put in a Folder
 2. Open Browser and go to Extensions
