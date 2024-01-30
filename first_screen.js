@@ -1,7 +1,7 @@
 
 document.getElementById("FS_remove_id").addEventListener("click", function() {
   var FS = document.querySelector(".FS");
-  var container =document.querySelector(".container")
+  var container = document.querySelector(".container")
 
   container.style.display = ""
   FS.style.display = "none";
@@ -17,14 +17,13 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
     location.reload();
     });
 
-  var elem = document.documentElement;
 
-  function FullScreen() {
-
+  document.getElementById("FullS_id").addEventListener("click",function() {
+    var elem = document.documentElement;
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
     }
-  }
+  })
 
 
 
