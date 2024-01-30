@@ -15,4 +15,3 @@ How to NexTab
 2. Open Browser and go to Extensions
 3. Activate Developer mode and Load unpacked
 4. Select downloaded Folder
->>>>>>> 7764608608242aae565aa3863adeb7e5007b8a91
