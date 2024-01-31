@@ -1,5 +1,6 @@
 
 document.getElementById("FS_remove_id").addEventListener("click", function() {
+
   var FS = document.querySelector(".FS");
   var container = document.querySelector(".container")
 
@@ -9,19 +10,24 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
   });
  
   document.getElementById("FS_form_id").addEventListener("submit", function(event) {
-    event.preventDefault();
+    
     var cname = document.getElementById("test_text_id").value;
+
+    event.preventDefault();
     setCookie("username", cname, 365);
     console.log(cname);
     console.log(document.cookie)
     location.reload();
+
     });
 
-
   document.getElementById("FullS_id").addEventListener("click",function() {
+
     var elem = document.documentElement;
+
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
+
     }
   })
 

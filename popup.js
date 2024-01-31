@@ -1,11 +1,11 @@
-document.getElementById("open_visuals_id").addEventListener("click", function() {
-
-
+ 
   var settings_overlay = document.querySelector(".settings_check");
   var visuals_overlay = document.querySelector(".visuals_check");
   var settings = document.getElementById("open_settings_id");
   var visuals = document.getElementById("open_visuals_id");
-  
+
+//Visuals
+document.getElementById("open_visuals_id").addEventListener("click", function() {
 
   if (! visuals.classList.contains("opened")) {
 
@@ -13,7 +13,6 @@ document.getElementById("open_visuals_id").addEventListener("click", function() 
     settings.classList.remove("opened");
     settings_overlay.style.display = "none";
     visuals.classList.add("opened");
-
 
   } else {
 
@@ -23,14 +22,8 @@ document.getElementById("open_visuals_id").addEventListener("click", function() 
   }
 });
 
-
+//Settings
 document.getElementById("open_settings_id").addEventListener("click", function() {
-  
-  var settings_overlay = document.querySelector(".settings_check");
-  var visuals_overlay = document.querySelector(".visuals_check");
-  var settings = document.getElementById("open_settings_id");
-  var visuals = document.getElementById("open_visuals_id");
-  
 
     if (! settings.classList.contains("opened")) {
 
@@ -38,7 +31,6 @@ document.getElementById("open_settings_id").addEventListener("click", function()
       visuals.classList.remove("opened");
       visuals_overlay.style.display = "none";
       settings.classList.add("opened");
-
 
     } else {
 

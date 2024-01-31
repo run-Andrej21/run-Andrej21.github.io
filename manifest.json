@@ -1,6 +1,6 @@
 {
-    "name": "New Tab",
-    "description": "Overrides the new tab",
+    "name": "NexTab",
+    "description": "It's a NewTab, it's a BetterTab, the next level shit, introducing ///NexTab///.",
     "version": "0.1",
     "incognito": "split",
     "chrome_url_overrides": {

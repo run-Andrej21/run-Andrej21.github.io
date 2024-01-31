@@ -8,8 +8,6 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'unsafe-inline' 'self'">
     <title>NexTab</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="the-cookie.js">
-    
     
 </head>
 
@@ -18,83 +16,82 @@
     <div class="first_screen">    
 
         <div class="FS" id="FS_id" style="display: none;">
+
             <form id="FS_form_id" target="_self">
+
                 <input type="text" id="test_text_id" class="test_text_id" style="height: 10; width: 40px;" placeholder="Name?">
                 
-
             </form>
+
         <button class="FullS" id="FullS_id" style="height: 30px; width: 30px;"></button>
         <button class="FS_remove" id="FS_remove_id" style="height: 50px; width: 50px;"></button>
+       
         </div>
-    </div>
-    
 
     </div>
    
     <div class="container" id="container_id" style="display: none;">
 
-
         <div class="messagesandtime">
 
             <ol class="messagesandtime_ol">
+
             <h1 id="HowTFDoIMakeTime"></h1>
             <h1 id="textname"></h1> 
 
-            
-
-            
             </ol>
+
+        </div>
+
+        <div class="taskbar" id="Taskbar">
+            
+            <button class="open_settings" id="open_settings_id" style="background: transparent; border: 0;"><img height="30" width="30" src="image/Icons/Settings_Icon.png"/></button>
+
+                <div class="settings_check" is="settings_check_id">
+                <div class="the_settings" id="the_settings_id">
+                    
+                    <ol class="settings_box">
+
+                    <button class="del_name" id="del_name_id" style="background: transparent; border: 0px;">Reset Name</button>
+                    
+                    <button class="open_PLACEHOLDER1" id="open_PLACEHOLDER1_id" style="background: transparent; border: 0px;">PLACEHOLDER1</button>
+
+                    <button class="open_PLACEHOLDER2" id="open_PLACEHOLDER2_id" style="background: transparent; border: 0px;">PLACEHOLDER2</button>
+
+                    <button class="open_PLACEHOLDER3" id="open_PLACEHOLDER3_id" style="background: transparent; border: 0px;">PLACEHOLDER3</button>
+                
+                    <button class="open_PLACEHOLDER4" id="open_PLACEHOLDER4_id" style="background: transparent; border: 0px;">PLACEHOLDER4</button>
+                    
+                    </ol>
+                    
+                </div>
+                </div>
+                
+
+            <button class="open_calendar" id="open_calendar_id" style="background: transparent; border: 0;"><img height="30" width="30" src="image/Icons/Calendar_icon.png"/></button> 
+               
+                <div class="calendar_check" id="calendar_check">
+                <div class="the_calendar" id="the_calendar_id">
+                    
+                </div>
+                </div>
+                
+            <button class="open_visuals" id="open_visuals_id" style="background: transparent; border: 0;"><img height="30" width="30" src="image/Icons/Pen_Icon.png"/></button>
+               
+                <div class="visuals_check" id="visuals_check_id">
+                <div class="the_visuals" id="the_visuals_id">
+                    
+                </div>
+                </div>
+
+        </div>
+
     </div>
 
-
-    <div class="taskbar" id="Taskbar">
-        
-        <button class="open_settings" id="open_settings_id" style="background: transparent; border: 0;"><img height="30" width="30" src="image/Icons/Settings_Icon.png"/></button>  
-            <div class="settings_check" is="settings_check_id">
-            <div class="the_settings" id="the_settings_id">
-                
-
-                <ol class="settings_box">
-                <button class="del_name" id="del_name_id" style="background: transparent; border: 0px;">Reset Name</button>
-                
-                
-                <button class="open_PLACEHOLDER1" id="open_PLACEHOLDER1_id" style="background: transparent; border: 0px;">PLACEHOLDER1</button>
-
-                <button class="open_PLACEHOLDER2" id="open_PLACEHOLDER2_id" style="background: transparent; border: 0px;">PLACEHOLDER2</button>
-
-                <button class="open_PLACEHOLDER3" id="open_PLACEHOLDER3_id" style="background: transparent; border: 0px;">PLACEHOLDER3</button>
-            
-                <button class="open_PLACEHOLDER4" id="open_PLACEHOLDER4_id" style="background: transparent; border: 0px;">PLACEHOLDER4</button>
-                </ol>
-                
-            </div>
-            </div>
-            
-
-        <button class="open_calendar" id="open_calendar_id" style="background: transparent; border: 0;"><img height="30" width="30" src="image/Icons/Calendar_icon.png"/></button> 
-            <div class="calendar_check" id="calendar_check">
-            <div class="the_calendar" id="the_calendar_id">
-                
-
-            </div>
-            </div>
-            
-        <button class="open_visuals" id="open_visuals_id" style="background: transparent; border: 0;"><img height="30" width="30" src="image/Icons/Pen_Icon.png"/></button>
-            <div class="visuals_check" id="visuals_check_id">
-            <div class="the_visuals" id="the_visuals_id">
-                
-
-            </div>
-            </div>
-
-
-    </div>
-
-        
 </body>
+
 <script src="first_screen.js"></script>
 <script src="popup.js"></script>
 <script src="the-cookie.js"></script>
-
 
 </html>
