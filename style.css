@@ -109,19 +109,20 @@
 }
 
 .codefieldtext {
-    
     height: 20px;
     width: 100px;
-    top: px;
-    right: px;
-   
+    top: 5%;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
 }
 
 .open_calendar {
     cursor: pointer;
     box-sizing: border-box;
     margin: 5px 0;
-
 }
 
 
