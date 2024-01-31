@@ -108,6 +108,14 @@
     color: gray;
 }
 
+.codefieldtext {
+    
+    height: 20px;
+    width: 100px;
+    top: px;
+    right: px;
+   
+}
 
 .open_calendar {
     cursor: pointer;
