@@ -15,3 +15,4 @@
 3. Activate Developer mode and Load unpacked
 4. Select downloaded Folder
 
+test
