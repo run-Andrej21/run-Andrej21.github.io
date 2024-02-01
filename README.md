@@ -14,3 +14,4 @@
 2. Open Browser and go to Extensions
 3. Activate Developer mode and Load unpacked
 4. Select downloaded Folder
+
