@@ -40,6 +40,39 @@ document.getElementById("open_settings_id").addEventListener("click", function()
     }
 });
 
+//codefield
 
+const CF_code = ["ArrowUp", "ArrowLeft", "ArrowRight", "ArrowDown"];
+let CF_pos = 0;
+let stopthisshit = false;
+var codefield_overlay = document.querySelector(".codefield_text_check")
+var codefield_id = document.getElementById("codefield_text_id")
 
+document.addEventListener("keydown", function (down) {
 
+  
+
+if (down.code === CF_code[CF_pos]) {
+
+  CF_pos++
+  console.log(CF_pos)
+
+} if (CF_pos === 4) {
+
+  stopthisshit = ! stopthisshit
+}
+
+if (stopthisshit === true) {
+
+    codefield_id.classList.remove("opened");
+    codefield_overlay.style.display = "none";
+    CF_pos = 0;
+
+} else {
+
+  codefield_id.classList.add("opened");
+  codefield_overlay.style.display = "block"
+  CF_pos = 0;
+}
+
+});
