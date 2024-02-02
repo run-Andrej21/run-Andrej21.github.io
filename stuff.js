@@ -40,6 +40,10 @@ document.getElementById("open_settings_id").addEventListener("click", function()
     }
 });
 
+document.getElementById("set_shortcut_id").addEventListener("click", function() {
+
+  
+})
 //codefield
 
 const CF_code = ["ControlLeft", "ControlLeft", "ShiftLeft", "ControlLeft"];
@@ -155,3 +159,5 @@ document.addEventListener('DOMContentLoaded', function () {
   textField2.addEventListener("keypress", Text);
 
 });
+
+
