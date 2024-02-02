@@ -124,6 +124,13 @@
     z-index: 8;
 }
 
+.codefield_text {
+
+    border-width: 5px;
+    border-color: silver;
+    
+}
+
 .codefield2 {
     height: 20px;
     width: 50px;
@@ -132,13 +139,20 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    color: red;
 
 }
 
 .codefield2_text_check {
     display: none;
     z-index: 8;
+
+}
+
+.codefield2_text {
+
+    border-width: 5px;
+    border-color: silver;
+
 }
 
 .open_calendar {
