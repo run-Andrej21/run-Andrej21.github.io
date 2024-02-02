@@ -15,8 +15,6 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
 
     event.preventDefault();
     setCookie("username", cname, 365);
-    console.log(cname);
-    console.log(document.cookie)
     location.reload();
 
     });
@@ -26,6 +24,7 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
     var elem = document.documentElement;
 
     if (elem.requestFullscreen) {
+      
       elem.requestFullscreen();
 
     }

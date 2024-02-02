@@ -47,6 +47,8 @@ let CF_pos = 0;
 let stopthisshit = false;
 var codefield_overlay = document.querySelector(".codefield_text_check")
 var codefield_id = document.getElementById("codefield_text_id")
+var codefield2_overlay = document.querySelector(".codefield2_text_check")
+var codefield2_id = document.getElementById("codefield2_text_id")
 let CF_ok = false;
 
 document.addEventListener("keydown", function (down) {
@@ -76,6 +78,9 @@ if (stopthisshit === true) {
   codefield_id.classList.add("opened");
   codefield_overlay.style.display = "block"
   
+  codefield2_id.classList.add("opened");
+  codefield2_overlay.style.display = "block"
+
   CF_pos = 0;
   CF_ok = false;
 
@@ -84,9 +89,69 @@ if (stopthisshit === true) {
   codefield_id.classList.remove("opened");
   codefield_overlay.style.display = "none";
 
+  codefield2_id.classList.remove("opened");
+  codefield2_overlay.style.display = "none";
+
   CF_pos = 0;
   CF_ok = false;
 
 }
   }
+});
+
+//CF stuff
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const textField1 = document.getElementById("codefield_text_id");
+  const textField2 = document.getElementById("codefield2_text_id");
+
+  function Text(event) {
+      const newValue = event.target.value;
+
+      if (newValue === "21") {
+          
+          alert("sheeesh");
+
+          event.target.value = "";
+
+      }
+
+      if (newValue === "ms") {
+
+        var FS = document.querySelector(".FS");
+        var container = document.querySelector(".container")
+      
+        container.style.display = ""
+        FS.style.display = "none";
+
+        event.target.value = "";
+      
+      }
+
+      if (newValue === "fs") {
+
+        var FS = document.querySelector(".FS");
+        var container = document.querySelector(".container")
+      
+        container.style.display = "none"
+        FS.style.display = "";
+
+        event.target.value = "";
+      
+      }
+
+      if (newValue === "fulls") {
+
+        var elem = document.documentElement;
+      
+        elem.requestFullscreen();
+
+      }
+
+  }
+
+  textField1.addEventListener("keypress", Text);
+  textField2.addEventListener("keypress", Text);
+
 });
