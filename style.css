@@ -32,7 +32,7 @@
 .container { 
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(image/Background/bg4.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(image/Background/bg5.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
