@@ -42,7 +42,7 @@ function setCookie(cname, cvalue, exdays) {
    
 
     document.getElementById("del_name_id").addEventListener("click", function() {
-
+      console.log("a")
       location.reload();
 
       document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -52,7 +52,7 @@ function setCookie(cname, cvalue, exdays) {
 
 //Time
 
-    let time = document.getElementById("HowTFDoIMakeTime");
+    let time = document.getElementById("HowTFDoIMakeTime_id");
 
         setInterval(() =>{
             
