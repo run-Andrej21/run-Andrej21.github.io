@@ -1,23 +1,31 @@
  
   var settings_overlay = document.querySelector(".settings_check");
-  var visuals_overlay = document.querySelector(".visuals_check");
   var settings = document.getElementById("open_settings_id");
+
+  var visuals_overlay = document.querySelector(".visuals_check");
   var visuals = document.getElementById("open_visuals_id");
+  
+  var shortcut_overlay = document.querySelector(".shortcut_check")
+  var shortcut_settings = document.getElementById("shortcut_settings_id") 
 
 //Visuals
 document.getElementById("open_visuals_id").addEventListener("click", function() {
 
   if (! visuals.classList.contains("opened")) {
+    
+    settings_overlay.style.display = "none"
+    settings.classList.remove("opened");
+
+    shortcut_overlay.style.display = "none";
+    shortcut_settings.classList.remove("opened");
 
     visuals_overlay.style.display = "block";
-    settings.classList.remove("opened");
-    settings_overlay.style.display = "none";
     visuals.classList.add("opened");
 
   } else {
 
-    visuals.classList.remove("opened");
     visuals_overlay.style.display = "none";
+    visuals.classList.remove("opened");
 
   }
 });
@@ -27,9 +35,13 @@ document.getElementById("open_settings_id").addEventListener("click", function()
 
     if (! settings.classList.contains("opened")) {
 
-      settings_overlay.style.display = "block";
-      visuals.classList.remove("opened");
       visuals_overlay.style.display = "none";
+      visuals.classList.remove("opened");
+
+      shortcut_overlay.style.display = "none";
+      shortcut_settings.classList.remove("opened");
+
+      settings_overlay.style.display = "block";
       settings.classList.add("opened");
 
     } else {
@@ -39,6 +51,22 @@ document.getElementById("open_settings_id").addEventListener("click", function()
 
     }
 });
+
+//Shortcut Settings
+document.getElementById("shortcut_button_id").addEventListener("click", function(){
+
+  if(! shortcut_settings.classList.contains("opened")) {
+
+    settings_overlay.style.display = "none";
+    settings.classList.remove("opened");
+
+    visuals_overlay.style.display = "none";
+    visuals.classList.remove
+
+  }
+
+
+})
 
 document.getElementById("set_shortcut_button_id").addEventListener("click", function() {
 
@@ -159,5 +187,6 @@ document.addEventListener('DOMContentLoaded', function () {
   textField2.addEventListener("keypress", Text);
 
 });
+
 
 
