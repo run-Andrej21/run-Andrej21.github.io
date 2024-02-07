@@ -40,7 +40,7 @@ document.getElementById("open_settings_id").addEventListener("click", function()
     }
 });
 
-document.getElementById("set_shortcut_id").addEventListener("click", function() {
+document.getElementById("set_shortcut_button_id").addEventListener("click", function() {
 
   
 })
