@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+/* First screen */
 .FS_remove {
     cursor: pointer;
     box-sizing: border-box;
@@ -29,6 +29,7 @@
 
 }
 
+/* The Main stuff */
 .container { 
     width: 100%;
     min-height: 100vh;
@@ -47,10 +48,11 @@
     color: transparent;
     font-size: 30px;
     text-align: center;
-    text-shadow: 0px 0px 20px rgb(0, 238, 255);
+    text-shadow: 0px 0px 20px rgb(0, 42, 255);
     -webkit-text-stroke: 2px rgb(254, 254, 254);
 }
 
+/* Taskbar */
 .taskbar {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
     height: 550px;
@@ -65,9 +67,9 @@
     border-color: white;
     border-style: solid;
     border-width: 2px;
-    box-shadow:  0px 0px 20px rgb(0, 238, 255);
+    box-shadow:  0px 0px 20px rgb(0, 42, 255);
 }
-
+    /* Settings */
 .open_settings {
     cursor: pointer;
     box-sizing: border-box;
@@ -77,6 +79,15 @@
 .settings_check {
     display: none;
     z-index: 8;
+}
+
+.settings_box button {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    line-height: 1.5;
+    cursor: pointer;
 }
 
 .the_settings {
@@ -98,14 +109,15 @@
     border-width: 2px;
 }
 
-.shortcut_settings {
+        /* shortcut in settings */
+.settings_shortcut {
     
     border-radius: 15px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
     height: 550px;
     width: 200px;
     position: absolute;
-    left: 100px;
+    left: 0px;
     bottom: 0px;
     border: 50px;
     flex-direction: column;
@@ -114,76 +126,12 @@
     display: flex;
 }
 
-.shortcut_button{
-
-    color: red;
-}
-
-.shortcut_check {
+.settings_shortcut_check {
     display: none;
     z-index: 8;
 }
 
-.settings_box button {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    display: block;
-    line-height: 1.5;
-    cursor: pointer;
-}
-
-.codefield {
-    height: 20px;
-    width: 100px;
-    top: 5%;
-    position: absolute;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-
-}
-
-.codefield_text_check {
-    display: none;
-    z-index: 8;
-}
-
-.codefield_text {
-
-    border-width: 3px;
-    border-color: silver;
-    box-shadow:  0px 0px 20px rgb(0, 238, 255);
-    border-radius: 10px;
-    
-}
-
-.codefield2 {
-    height: 20px;
-    width: 50px;
-    top: 5%;
-    position: absolute;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-
-}
-
-.codefield2_text_check {
-    display: none;
-    z-index: 8;
-
-}
-
-.codefield2_text {
-
-    border-width: 3px;
-    border-color: silver;
-    box-shadow:  0px 0px 20px rgb(0, 238, 255);
-    border-radius: 10px;
-
-}
-
+ /* Calendar */
 .open_calendar {
     cursor: pointer;
     box-sizing: border-box;
@@ -216,7 +164,7 @@
     border-width: 2px;
 }
 
-
+    /* Visuals */
 .open_visuals {
 
     cursor: pointer;
@@ -253,6 +201,7 @@
 
 }
 
+/* The Shortcuts */
 .shortcut {
     
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
@@ -269,5 +218,58 @@
     border-color: white;
     border-style: solid;
     border-width: 2px;
+
+}
+
+ /* Codefield */
+
+ .codefield {
+    height: 20px;
+    width: 100px;
+    top: 5%;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.codefield_text_check {
+    display: none;
+    z-index: 8;
+}
+
+.codefield_text {
+
+    border-width: 3px;
+    border-color: silver;
+    box-shadow:  0px 0px 20px rgb(0, 42, 255);
+    border-radius: 10px;
+    
+}
+    /* Codefield2 */
+.codefield2 {
+    height: 20px;
+    width: 50px;
+    top: 5%;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.codefield2_text_check {
+    display: none;
+    z-index: 8;
+
+}
+
+.codefield2_text {
+
+    border-width: 3px;
+    border-color: silver;
+    box-shadow:  0px 0px 20px rgb(0, 42, 255);
+    border-radius: 10px;
 
 }

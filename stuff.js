@@ -1,23 +1,17 @@
- 
+ //Taskbar start
   var settings_overlay = document.querySelector(".settings_check");
   var settings = document.getElementById("open_settings_id");
 
   var visuals_overlay = document.querySelector(".visuals_check");
   var visuals = document.getElementById("open_visuals_id");
-  
-  var shortcut_overlay = document.querySelector(".shortcut_check")
-  var shortcut_settings = document.getElementById("shortcut_settings_id") 
 
-//Visuals
+  //Visuals
 document.getElementById("open_visuals_id").addEventListener("click", function() {
 
   if (! visuals.classList.contains("opened")) {
     
     settings_overlay.style.display = "none"
     settings.classList.remove("opened");
-
-    shortcut_overlay.style.display = "none";
-    shortcut_settings.classList.remove("opened");
 
     visuals_overlay.style.display = "block";
     visuals.classList.add("opened");
@@ -30,16 +24,13 @@ document.getElementById("open_visuals_id").addEventListener("click", function() 
   }
 });
 
-//Settings
+  //Settings
 document.getElementById("open_settings_id").addEventListener("click", function() {
 
     if (! settings.classList.contains("opened")) {
 
       visuals_overlay.style.display = "none";
       visuals.classList.remove("opened");
-
-      shortcut_overlay.style.display = "none";
-      shortcut_settings.classList.remove("opened");
 
       settings_overlay.style.display = "block";
       settings.classList.add("opened");
@@ -51,27 +42,32 @@ document.getElementById("open_settings_id").addEventListener("click", function()
 
     }
 });
+//Taskbar end
 
-//Shortcut Settings
-document.getElementById("shortcut_button_id").addEventListener("click", function(){
+//settings //Shortcut Settings
 
-  if(! shortcut_settings.classList.contains("opened")) {
+var settings_shortcut_overlay = document.querySelector(".settings_shortcut_check");
+var settings_shortcut = document.getElementById("settings_shortcut_id");
 
-    settings_overlay.style.display = "none";
-    settings.classList.remove("opened");
+document.getElementById("shortcut_button_id").addEventListener("click", function() {
 
-    visuals_overlay.style.display = "none";
-    visuals.classList.remove
+  if(! settings_shortcut.classList.contains("opened")) {
 
+    settings_shortcut_overlay.style.display = "block";
+    settings_shortcut.classList.add("opened");
+console.log("open")
+  } else {
+
+    settings_shortcut_overlay.style.display = "none";
+    settings_shortcut.classList.remove("opened");
+console.log("no open")
   }
 
 
 })
 
-document.getElementById("set_shortcut_button_id").addEventListener("click", function() {
 
-  
-})
+
 //codefield
 
 const CF_code = ["ControlLeft", "ControlLeft", "ShiftLeft", "ControlLeft"];
