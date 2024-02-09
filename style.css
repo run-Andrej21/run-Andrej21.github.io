@@ -117,7 +117,7 @@
     height: 550px;
     width: 200px;
     position: absolute;
-    left: 0px;
+    left: 300px;
     bottom: 0px;
     border: 50px;
     flex-direction: column;
@@ -132,6 +132,7 @@
 }
 
  /* Calendar */
+
 .open_calendar {
     cursor: pointer;
     box-sizing: border-box;
@@ -165,6 +166,7 @@
 }
 
     /* Visuals */
+
 .open_visuals {
 
     cursor: pointer;
@@ -202,6 +204,7 @@
 }
 
 /* The Shortcuts */
+
 .shortcut {
     
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
@@ -248,6 +251,7 @@
     
 }
     /* Codefield2 */
+
 .codefield2 {
     height: 20px;
     width: 50px;
