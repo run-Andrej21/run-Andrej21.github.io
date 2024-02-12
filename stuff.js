@@ -1,17 +1,25 @@
  //Taskbar start
+ //settings
   var settings_overlay = document.querySelector(".settings_check");
   var settings = document.getElementById("open_settings_id");
-
+//visuals
   var visuals_overlay = document.querySelector(".visuals_check");
   var visuals = document.getElementById("open_visuals_id");
+//settings //shortcut
+  var settings_shortcut_overlay = document.querySelector(".settings_shortcut_check");
+  var settings_shortcut = document.getElementById("settings_shortcut_id");
 
   //Visuals
 document.getElementById("open_visuals_id").addEventListener("click", function() {
 
   if (! visuals.classList.contains("opened")) {
     
+    
     settings_overlay.style.display = "none"
     settings.classList.remove("opened");
+
+    settings_shortcut_overlay.style.display = "none";
+    settings_shortcut.classList.remove("opened");
 
     visuals_overlay.style.display = "block";
     visuals.classList.add("opened");
@@ -35,6 +43,9 @@ document.getElementById("open_settings_id").addEventListener("click", function()
       settings_overlay.style.display = "block";
       settings.classList.add("opened");
 
+      settings_shortcut_overlay.style.display = "none";
+      settings_shortcut.classList.remove("opened");
+
     } else {
 
       settings.classList.remove("opened");
@@ -55,16 +66,39 @@ document.getElementById("shortcut_button_id").addEventListener("click", function
 
     settings_shortcut_overlay.style.display = "block";
     settings_shortcut.classList.add("opened");
-console.log("open")
+
   } else {
 
     settings_shortcut_overlay.style.display = "none";
     settings_shortcut.classList.remove("opened");
-console.log("no open")
   }
 
 
 })
+
+//shortcut #1
+
+
+
+
+  document.getElementById("Shortcut1_input").addEventListener("keypress", function(shortcut1) {
+
+    if (shortcut1.key === "Enter") {
+
+      var Shortcut1_input = document.getElementById("Shortcut1_input");
+
+      var shortcut1_stuff = Shortcut1_input.value
+
+      console.log(shortcut1_stuff)
+
+      
+    }
+  })
+
+  console.log(shortcut1)
+
+
+
 
 
 
