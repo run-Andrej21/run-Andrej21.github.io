@@ -77,21 +77,17 @@ document.getElementById("shortcut_button_id").addEventListener("click", function
 //shortcut #1
     //from inout into a var
 
-    document.getElementById("Shortcut1_input").addEventListener("keypress", function(shortcut1) {
+    document.getElementById("shortcut1_input").addEventListener("keypress", function(shortcut1) {
 
       if (shortcut1.key === "Enter") {
   
-        var shortcut1_stuff = document.getElementById("Shortcut1_input").value;
+        var shortcut1_stuff = document.getElementById("shortcut1_input").value;
   
         console.log(shortcut1_stuff)
 
         let cname = shortcut1_stuff;
 
         setCookie("shortcut_1_stuff", cname, 365);
-
-        let shortcut1_logo = document.querySelector("shortcut1");
-
-        
 
       }})
   //if button
@@ -101,6 +97,117 @@ document.getElementById("shortcut_button_id").addEventListener("click", function
           let shortcut_1_cookie = getCookie("shortcut_1_stuff");
 
           window.location = shortcut_1_cookie
+  
+          }
+        )
+
+
+//shortcut #2
+    //from inout into a var
+
+    document.getElementById("shortcut2_input").addEventListener("keypress", function(shortcut2) {
+
+      if (shortcut2.key === "Enter") {
+  
+        var shortcut2_stuff = document.getElementById("shortcut2_input").value;
+  
+        console.log(shortcut2_stuff)
+
+        let cname = shortcut2_stuff;
+
+        setCookie("shortcut_2_stuff", cname, 365);
+
+      }})
+  //if button
+
+        document.getElementById("shortcut2_id").addEventListener("click", function() {
+
+          let shortcut_2_cookie = getCookie("shortcut_2_stuff");
+
+          window.location = shortcut_2_cookie
+  
+          }
+        )
+
+        
+//shortcut #3
+    //from inout into a var
+
+    document.getElementById("shortcut3_input").addEventListener("keypress", function(shortcut3) {
+
+      if (shortcut3.key === "Enter") {
+  
+        var shortcut3_stuff = document.getElementById("shortcut3_input").value;
+  
+        console.log(shortcut3_stuff)
+
+        let cname = shortcut3_stuff;
+
+        setCookie("shortcut_3_stuff", cname, 365);
+
+      }})
+  //if button
+
+        document.getElementById("shortcut3_id").addEventListener("click", function() {
+
+          let shortcut_3_cookie = getCookie("shortcut_3_stuff");
+
+          window.location = shortcut_3_cookie
+  
+          }
+        )
+
+        
+//shortcut #4
+    //from inout into a var
+
+    document.getElementById("shortcut4_input").addEventListener("keypress", function(shortcut4) {
+
+      if (shortcut4.key === "Enter") {
+  
+        var shortcut4_stuff = document.getElementById("shortcut4_input").value;
+  
+        console.log(shortcut4_stuff)
+
+        let cname = shortcut4_stuff;
+
+        setCookie("shortcut_4_stuff", cname, 365);
+
+      }})
+  //if button
+
+        document.getElementById("shortcut4_id").addEventListener("click", function() {
+
+          let shortcut_4_cookie = getCookie("shortcut_4_stuff");
+
+          window.location = shortcut_4_cookie
+  
+          }
+        )
+
+        //shortcut #5
+    //from inout into a var
+
+    document.getElementById("shortcut5_input").addEventListener("keypress", function(shortcut5) {
+
+      if (shortcut5.key === "Enter") {
+  
+        var shortcut5_stuff = document.getElementById("shortcut5_input").value;
+  
+        console.log(shortcut5_stuff)
+
+        let cname = shortcut5_stuff;
+
+        setCookie("shortcut_5_stuff", cname, 365);
+
+      }})
+  //if button
+
+        document.getElementById("shortcut5_id").addEventListener("click", function() {
+
+          let shortcut_5_cookie = getCookie("shortcut_5_stuff");
+
+          window.location = shortcut_5_cookie
   
           }
         )
