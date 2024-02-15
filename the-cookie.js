@@ -26,6 +26,7 @@ function setCookie(cname, cvalue, exdays) {
     document.addEventListener("DOMContentLoaded", function () {
       var container = document.querySelector(".container")
       let username = getCookie("username");
+
       if (username != "") {
         
         container.style.display = ""
@@ -49,6 +50,7 @@ function setCookie(cname, cvalue, exdays) {
       
 
     });
+
 
 //Time
 

@@ -8,7 +8,7 @@ document.getElementById("FS_remove_id").addEventListener("click", function() {
   FS.style.display = "none";
 
   });
- 
+
   document.getElementById("FS_form_id").addEventListener("submit", function(event) {
     
     var cname = document.getElementById("test_text_id").value;

@@ -72,34 +72,38 @@ document.getElementById("shortcut_button_id").addEventListener("click", function
     settings_shortcut_overlay.style.display = "none";
     settings_shortcut.classList.remove("opened");
   }
-
-
 })
 
 //shortcut #1
+    //from inout into a var
 
+    document.getElementById("Shortcut1_input").addEventListener("keypress", function(shortcut1) {
 
+      if (shortcut1.key === "Enter") {
+  
+        var shortcut1_stuff = document.getElementById("Shortcut1_input").value;
+  
+        console.log(shortcut1_stuff)
 
+        let cname = shortcut1_stuff;
 
-  document.getElementById("Shortcut1_input").addEventListener("keypress", function(shortcut1) {
+        setCookie("shortcut_1_stuff", cname, 365);
 
-    if (shortcut1.key === "Enter") {
+        let shortcut1_logo_id = document.getElementById("shortcut1_logo_id");
 
-      var Shortcut1_input = document.getElementById("Shortcut1_input");
+        document.getElementById("").img
 
-      var shortcut1_stuff = Shortcut1_input.value
+      }})
+  //if button
 
-      console.log(shortcut1_stuff)
+        document.getElementById("shortcut1_id").addEventListener("click", function() {
 
-      
-    }
-  })
+          let shortcut_1_cookie = getCookie("shortcut_1_stuff");
 
-  console.log(shortcut1)
-
-
-
-
+          window.location = shortcut_1_cookie
+  
+          }
+        )
 
 
 //codefield
