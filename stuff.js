@@ -89,9 +89,9 @@ document.getElementById("shortcut_button_id").addEventListener("click", function
 
         setCookie("shortcut_1_stuff", cname, 365);
 
-        let shortcut1_logo_id = document.getElementById("shortcut1_logo_id");
+        let shortcut1_logo = document.querySelector("shortcut1");
 
-        document.getElementById("").img
+        
 
       }})
   //if button
