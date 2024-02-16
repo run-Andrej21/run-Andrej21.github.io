@@ -9,7 +9,7 @@
   var settings_shortcut_overlay = document.querySelector(".settings_shortcut_check");
   var settings_shortcut = document.getElementById("settings_shortcut_id");
 
-  //Visuals
+  //Visuals popup
 document.getElementById("open_visuals_id").addEventListener("click", function() {
 
   if (! visuals.classList.contains("opened")) {
@@ -32,7 +32,31 @@ document.getElementById("open_visuals_id").addEventListener("click", function() 
   }
 });
 
-  //Settings
+//visuals stuff
+
+ document.getElementById("change_background_id").addEventListener("click", function(){
+
+ document.getElementById("test1_id_id").click()
+
+ document.getElementById("test1_id_id").addEventListener("click", function(){
+ 
+
+  var background = document.querySelector(".container");
+  var what_background = document.getElementById("test1_id_id").value;
+
+  console.log(what_background)
+
+  if(! what_background === "" ){
+
+  console.log("sheeesh");
+  console.log(what_background);
+  }
+ })
+
+  
+ })
+
+  //Settings popup
 document.getElementById("open_settings_id").addEventListener("click", function() {
 
     if (! settings.classList.contains("opened")) {
@@ -50,6 +74,9 @@ document.getElementById("open_settings_id").addEventListener("click", function()
 
       settings.classList.remove("opened");
       settings_overlay.style.display = "none";
+
+      settings_shortcut_overlay.style.display = "none";
+      settings_shortcut.classList.remove("opened");
 
     }
 });
@@ -82,8 +109,6 @@ document.getElementById("shortcut_button_id").addEventListener("click", function
       if (shortcut1.key === "Enter") {
   
         var shortcut1_stuff = document.getElementById("shortcut1_input").value;
-  
-        console.log(shortcut1_stuff)
 
         let cname = shortcut1_stuff;
 
