@@ -38,22 +38,16 @@ document.getElementById("open_visuals_id").addEventListener("click", function() 
 
  document.getElementById("test1_id_id").click()
 
- document.getElementById("test1_id_id").addEventListener("click", function(){
+ document.getElementById("test1_id_id").addEventListener("click", function(event){
  
 
   var background = document.querySelector(".container");
   var what_background = document.getElementById("test1_id_id").value;
 
+  addEventListener("")
   console.log(what_background)
 
-  if(! what_background === "" ){
-
-  console.log("sheeesh");
-  console.log(what_background);
-  }
  })
-
-  
  })
 
   //Settings popup
