@@ -42,22 +42,34 @@
         </div>
         <div class="task_bar" id="Taskbar">
             
-            <button class="open_settings" id="open_settings_id" style="background: transparent; border: 0;"><img height="30" width="30" src="image/Icons/Settings_Icon.png"/></button>
-            <button class="open_visuals" id="open_visuals_id" style="background: transparent; border: 0;"><img height="30" width="30" src="image/Icons/Pen_Icon.png"/></button>
+            <button class="open_settings" id="open_settings_id" style="background: transparent; border: 0;"><img height="30" width="30" src="Icons/Settings_Icon.png"/></button>
+            <button class="open_visuals" id="open_visuals_id" style="background: transparent; border: 0;"><img height="30" width="30" src="Icons/Pen_Icon.png"/></button>
             <button class="open_search" id="open_search_id" style="background: transparent; border: 0;"><img height="30" width="30"></button>
             
         </div>
         <div class="visuals_check" id="visuals_check_id">
             <div class="the_visuals" id="the_visuals_id">
 
-                <button class="change_background" id="change_background_id" accept=".jpg, .png, .jpeg">Wallpaper</button>
+                <button id="change_background_id" style="background: transparent; border: 0;">Wallpaper</button>
+                <button id="text_visuals_id" style="background: transparent; border: 0;">Text</button>
 
-                <div class="visuals_background_check" id="visuals_background_check_id">
-                    <div class="visuals_the_background" id="visuals_the_background_id">
+            </div>
+            <div class="text_">
+                <div>
 
-                    </div>
                 </div>
-
+            </div>
+            <div class="visuals_background_check" id="visuals_background_check_id">
+                <div class="visuals_the_background" id="visuals_the_background_id">
+                    <p id="wallpaper_user_id"></p>
+                    <br>
+                    <p>Sadly, I cannot change the background from here since my creator is too lazy. If you want to change the background, you have to go to the wallpaper folder and name your wallpaper "bg_default.jpg".</p>
+                    <p>Im sorry</p>
+                    <br>
+                    <button class="wallpaper_copy" id="wallpaper_copy_id" style="background: transparent; border: 0;">bg_default.jpg</button>
+                    <br>
+                    <p1 id="copy_that_id" style="display: none;">Copy that</p1>
+                </div>
             </div>
         </div>
         <div class="settings_check" is="settings_check_id">

@@ -36,7 +36,7 @@
     min-height: 100vh;
     height: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(image/Background/bg_default.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(Wallpaper/bg_default.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -215,6 +215,19 @@
 
 }
 
+.the_visuals button{
+    
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+
+}
+
+/* the visuals / text */
+
+.text_visuals
 /* the visuals / the background */ 
 
 .visuals_background_check{
@@ -230,20 +243,49 @@
     height: 80%;
     width: 20%;
     position: absolute;
-    left: 12%;
+    left: 22%;
     bottom: 10%;
+    color: white;
     
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    
+    text-align: center;
+
     border-color: rgb(251, 251, 251);
     border-width: 2px;
     border-style: solid;
     box-shadow:  0px 0px 10px 5px rgb(0, 42, 255);
 
 }
+
+.visuals_the_background p{
+
+    margin: 10px;
+    font-size: 20px;
+
+}
+
+.visuals_the_background p1{
+
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: underline;
+    font-style: italic;
+
+}
+
+.visuals_the_background button{
+    
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /* The Shortcuts */
 
 .shortcut_bar {

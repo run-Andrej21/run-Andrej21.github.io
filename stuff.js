@@ -1,7 +1,5 @@
 
 
-
-
 function setCookie(cname, cvalue, exdays){
 
   const d = new Date();
@@ -47,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function (){
     
     container.style.display = "";
     document.getElementById("textname").textContent = ("Hello, " + username);
-
+    document.getElementById("wallpaper_user_id").textContent = ("Hello, " + username);
+  
   }else{
 
     var showFS = document.querySelector(".FS");
@@ -124,8 +123,28 @@ document.getElementById("change_background_id").addEventListener("click", functi
 
   if(! visuals_the_background.classList.contains("opened")){
     
+    visuals_the_background.classList.add("opened");
+    visuals_background_overlay.style.display = "block";
+ 
+  }else{
+
+    visuals_the_background.classList.remove("opened");
+    visuals_background_overlay.style.display = "none";
+
   }
 });
+
+document.getElementById("wallpaper_copy_id").addEventListener("click", function(){
+
+  var copy_that = document.getElementById("copy_that_id");
+  navigator.clipboard.writeText("bg_default.jpg");
+  
+  copy_that.style.display = "block"
+  setTimeout(function(){
+  document.getElementById("copy_that_id").style.display = "none";}, 2000);
+
+  })
+
 //Settings popup
 
 document.getElementById("open_settings_id").addEventListener("click", function(){
@@ -161,7 +180,7 @@ var settings_shortcut = document.getElementById("settings_shortcut_id");
 
 document.getElementById("shortcut_button_id").addEventListener("click", function(){
 
-  if(! settings_shortcut.classList.contains("opened")) {
+  if(! settings_shortcut.classList.contains("opened")){
 
     settings_shortcut_overlay.style.display = "block";
     settings_shortcut.classList.add("opened");
@@ -348,7 +367,7 @@ document.addEventListener("keydown", function (down){
 
 //CF stuff
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function (){
 
 const textField1 = document.getElementById("codefield_text_id");
 const textField2 = document.getElementById("codefield2_text_id");
