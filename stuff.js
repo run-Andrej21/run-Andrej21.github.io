@@ -96,7 +96,6 @@ document.getElementById("open_visuals_id").addEventListener("click", function(){
 
   if (! visuals.classList.contains("opened")) {
     
-    
     settings_overlay.style.display = "none";
     settings.classList.remove("opened");
 
@@ -314,8 +313,6 @@ let CF_pos = 0;
 let stopthisshit = false;
 var codefield_overlay = document.querySelector(".codefield_text_check")
 var codefield_id = document.getElementById("codefield_text_id")
-var codefield2_overlay = document.querySelector(".codefield2_text_check")
-var codefield2_id = document.getElementById("codefield2_text_id")
 let CF_ok = false;
 
 document.addEventListener("keydown", function (down){
@@ -332,7 +329,7 @@ document.addEventListener("keydown", function (down){
 
   if(CF_pos === 4){
 
-    stopthisshit = !stopthisshit
+    stopthisshit = !stopthisshit;
     CF_ok = true;
 
   }
@@ -344,9 +341,6 @@ document.addEventListener("keydown", function (down){
       codefield_id.classList.add("opened");
       codefield_overlay.style.display = "block";
 
-      codefield2_id.classList.add("opened");
-      codefield2_overlay.style.display = "block";
-
       CF_pos = 0;
       CF_ok = false;
 
@@ -354,9 +348,6 @@ document.addEventListener("keydown", function (down){
 
       codefield_id.classList.remove("opened");
       codefield_overlay.style.display = "none";
-
-      codefield2_id.classList.remove("opened");
-      codefield2_overlay.style.display = "none";
 
       CF_pos = 0;
       CF_ok = false;
@@ -367,19 +358,29 @@ document.addEventListener("keydown", function (down){
 
 //CF stuff
 
-document.addEventListener('DOMContentLoaded', function (){
+if(document.getElementById("codefield_text_id").addEventListener("keypress", function(event){
 
-const textField1 = document.getElementById("codefield_text_id");
-const textField2 = document.getElementById("codefield2_text_id");
-
-function Text(event){
-  const newValue = event.target.value;
+  if(event.key === "Enter"){
+    
+    console.log("a")
+    const newValue = event.target.value;
 
   if(newValue === "21"){
-      
+    
     alert("sheeesh");
     event.target.value = "";
 
+  }
+  
+  if(newValue === "fs"){
+
+    var FS = document.querySelector(".FS");
+    var container = document.querySelector(".container");
+  
+    container.style.display = "none";
+    FS.style.display = "";
+    event.target.value = "";
+  
   }
 
   if(newValue === "ms"){
@@ -389,17 +390,6 @@ function Text(event){
   
     container.style.display = "";
     FS.style.display = "none";
-    event.target.value = "";
-  
-  }
-
-  if(newValue === "fs"){
-
-    var FS = document.querySelector(".FS");
-    var container = document.querySelector(".container");
-  
-    container.style.display = "none";
-    FS.style.display = "";
     event.target.value = "";
   
   }
@@ -424,14 +414,24 @@ function Text(event){
 
     event.target.value = "";
 
+  };
+
+  if(newValue === "master_ju"){
+
+    document.getElementById("master_ju_id").style.display = "block";
+    document.getElementById("container_id").style.display = "none";
+    event.target.value = ""
   }
 
-}
 
-textField1.addEventListener("keypress", Text);
-textField2.addEventListener("keypress", Text);
+document.getElementById("master_ju_id").addEventListener("click", function(){
+  
+  document.getElementById("master_ju_id").style.display = "none";
+  document.getElementById("container_id").style.display = "";
 
-});
+  })}
+}));
+
 
 document.getElementById("FS_remove_id").addEventListener("click", function(){
 
@@ -462,4 +462,5 @@ document.getElementById("FullS_id").addEventListener("click",function(){
     elem.requestFullscreen();
 
   }
-})
+  
+});
