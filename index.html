@@ -51,29 +51,37 @@
         <div class="visuals_check" id="visuals_check_id">
             <div class="the_visuals" id="the_visuals_id">
 
-                <button id="change_background_id" style="background: transparent; border: 0;">Wallpaper</button>
-                <button id="text_visuals_id" style="background: transparent; border: 0;">Text</button>
+                <button id="change_background_id"  class="visuals_button1" style="background: transparent; border: 0;">Wallpaper</button>
+                <button id="visuals_text_button_id"  class="visuals_button2" style="background: transparent; border: 0;">Text</button>
 
-            </div>
-            <div class="text_">
-                <div>
-
-                </div>
-            </div>
-            <div class="visuals_background_check" id="visuals_background_check_id">
-                <div class="visuals_the_background" id="visuals_the_background_id">
-                    <p id="wallpaper_user_id"></p>
-                    <br>
-                    <p>Sadly, I cannot change the background from here since my creator is too lazy. If you want to change the background, you have to go to the wallpaper folder and name your wallpaper "bg_default.jpg".</p>
-                    <p>Im sorry</p>
-                    <br>
-                    <button class="wallpaper_copy" id="wallpaper_copy_id" style="background: transparent; border: 0;">bg_default.jpg</button>
-                    <br>
-                    <p1 id="copy_that_id" style="display: none;">Copy that</p1>
-                </div>
             </div>
         </div>
-        <div class="settings_check" is="settings_check_id">
+        <div class="visuals_background_check" id="visuals_background_check_id" style="display: none;">
+            <div class="visuals_the_background" id="visuals_the_background_id">
+                
+                <p id="wallpaper_user_id"></p>
+                <br>
+                <p>Sadly, I cannot change the background from here since my creator is too lazy. If you want to change the background, you have to go to the wallpaper folder and name your wallpaper "bg_default.jpg".</p>
+                <p>Im sorry</p>
+                <br>
+                <button class="wallpaper_copy" id="wallpaper_copy_id" style="background: transparent; border: 0;">bg_default.jpg</button>
+                <br>
+                <p1 id="copy_that_id" style="display: none;">Copy that</p1>
+           
+            </div>
+        </div>
+        <div class="the_text_check" id="the_text_check_id" style="display: none;">
+            <div class="the_text" id="the_text_id">
+               
+                <p>sheeesh</p>
+                <input type="text" id="text_color_input_id">
+                <input type="text" id="text_outline_inout_id">
+                <input type="text" id="text_box_shadow_id">
+                <input type="text" id="text_font_shadow_id">
+
+            </div>
+        </div>
+        <div class="settings_check" id="settings_check_id">
             <div class="the_settings" id="the_settings_id">
                 <ol class="settings_box">
 
@@ -87,7 +95,7 @@
             <div class="settings_shortcut" id="settings_shortcut_id">
                 <div>
                     <div class="settings_shortcut_text">
-                        <ol>
+                        <ol class="settings_shortcut_text_box">
 
                             <p>Shortcut #1</p>
                             <input type="text" id="shortcut1_input">
@@ -109,7 +117,6 @@
                 </div>
             </div>
         </div>
-      
         <div class="shortcut_bar" id="shortcut_bar_id">
 
             <button class="shortcut1" id="shortcut1_id"></button>

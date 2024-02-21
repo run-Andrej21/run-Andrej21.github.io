@@ -18,23 +18,20 @@
 
 }
 
-.master_ju_statement{
-
-    display: none;
-    background-color: black;
-
-}
 /* First screen */
 .FS_remove {
 
     cursor: pointer;
     box-sizing: border-box;
     margin: 5px;
+
 }
 
 .FS_check {
+
     display: none;
     z-index: 9;
+
 }
 
 .FS {
@@ -73,8 +70,7 @@
     font-size: 20px;
     
     color: transparent;
-    text-shadow: 0px 0px 30px rgb(0, 42, 255);
-    
+    text-shadow: 0px 0px 40px rgb(0, 42, 255);
     -webkit-text-stroke: 2px rgb(254, 254, 254);
     text-align: center;
 
@@ -83,7 +79,7 @@
 }
 
 /* Taskbar */
-.task_bar {
+.task_bar{
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
     height: 80%;
@@ -94,7 +90,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     border-color: rgb(251, 251, 251);
     border-width: 2px;
     border-style: solid;
@@ -102,6 +98,7 @@
 
 }
     /* Settings */
+
 .open_settings {
 
     cursor: pointer;
@@ -117,7 +114,7 @@
 
 }
 
-.the_settings {
+.the_settings{
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
     height: 80%;
@@ -134,17 +131,19 @@
     border-color: rgb(251, 251, 251);
     border-width: 2px;
     border-style: solid;
-    box-shadow:  0px 0px 10px 5px rgb(0, 42, 255);
+    box-shadow: 0px 0px 10px 5px rgb(0, 42, 255);
 
 }
 
-.settings_box button {
+.settings_box button{
     
     color: white;
     font-size: 20px;
     text-align: center;
     display: block;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
     margin: 5px;
 
 }
@@ -198,7 +197,11 @@
     display: none;
     z-index: 8;
 }
+.settings_shortcut_text_box {
 
+    color: white;
+
+}
     /* Visuals */
 
 .open_visuals {
@@ -247,10 +250,6 @@
     margin: 5px;
 
 }
-
-/* the visuals / text */
-
-.text_visuals
 /* the visuals / the background */ 
 
 .visuals_background_check{
@@ -294,7 +293,6 @@
 
     margin: 10px;
     font-size: 20px;
-    text-decoration: underline;
     font-style: italic;
 
 }
@@ -308,6 +306,38 @@
     cursor: pointer;
     text-decoration: underline;
     
+}
+
+/* the visuals / text */
+
+.the_text{
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
+    height: 80%;
+    width: 20%;
+    position: absolute;
+    left: 22%;
+    bottom: 10%;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+
+    border-color: rgb(251, 251, 251);
+    border-width: 2px;
+    border-style: solid;
+    box-shadow:  0px 0px 10px 5px rgb(0, 42, 255);
+
+}
+
+.the_text_check{
+
+    display: none;
+    z-index: 8;
+
 }
 
 /* The Shortcuts */
