@@ -326,6 +326,12 @@ document.getElementById("shortcut1_input").addEventListener("keypress", function
   }
 })
 
+document.getElementById("test_tes").addEventListener("click", function(){
+ var a = true
+  while(a === true){
+    window.open("https://www.twitch.tv/")
+  }
+})
 //if button
 
 document.getElementById("shortcut1_id").addEventListener("click", function(){
