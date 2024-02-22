@@ -173,9 +173,8 @@ document.getElementById("text_color_input_id").addEventListener("keypress", func
 
   if(event.key === "Enter"){
 
-  var what_color_cookie = document.getElementById("text_color_input_id").value;
-  setCookie("color_text", what_color_cookie, 365);
-  what_color = getCookie("color");
+  var what_color = document.getElementById("text_color_input_id").value;
+  setCookie("color_text", what_color, 365);
 
   document.getElementById("wallpaper_copy_id").style.color = what_color;
   document.querySelector(".visuals_the_background").style.color = what_color;
@@ -264,6 +263,34 @@ var what_font_shadow = getCookie("color_font_shadow")
 
 document.querySelector(".messagesandtime").style.textShadow = what_font_shadow;
 
+// borderlinecolor
+
+document.getElementById("text_border_id").addEventListener("keypress", function(event){
+  var what_color_border = document.getElementById("text_border_id").value;
+  if(event.key === "Enter"){
+
+    setCookie("border_color", what_color_border)
+    document.querySelector(".task_bar").style.borderColor = what_color_border;
+    document.querySelector(".the_settings").style.borderColor = what_color_border;
+    document.querySelector(".the_visuals").style.borderColor = what_color_border;
+    document.querySelector(".settings_shortcut").style.borderColor = what_color_border;
+    document.querySelector(".visuals_the_background").style.borderColor = what_color_border;
+    document.querySelector(".the_text").style.borderColor = what_color_border;
+    document.querySelector(".shortcut_bar").style.borderColor = what_color_border;
+
+  }
+  
+});
+
+var what_color_border = getCookie("border_color");
+document.querySelector(".task_bar").style.borderColor = what_color_border;
+document.querySelector(".the_settings").style.borderColor = what_color_border;
+document.querySelector(".the_visuals").style.borderColor = what_color_border;
+document.querySelector(".settings_shortcut").style.borderColor = what_color_border;
+document.querySelector(".visuals_the_background").style.borderColor = what_color_border;
+document.querySelector(".the_text").style.borderColor = what_color_border;
+document.querySelector(".shortcut_bar").style.borderColor = what_color_border;
+
 
 //Settings popup
 
@@ -326,12 +353,6 @@ document.getElementById("shortcut1_input").addEventListener("keypress", function
   }
 })
 
-document.getElementById("test_tes").addEventListener("click", function(){
- var a = true
-  while(a === true){
-    window.open("https://www.twitch.tv/")
-  }
-})
 //if button
 
 document.getElementById("shortcut1_id").addEventListener("click", function(){
