@@ -38,20 +38,28 @@ function getCookie(cname){
 
 document.addEventListener("DOMContentLoaded", function (){
 
-  var container = document.querySelector(".container");
   let username = getCookie("username");
 
   if(username != "") {
     
-    container.style.display = "";
-    document.getElementById("textname").textContent = ("Hello, " + username);
+    document.querySelector(".container").style.display = "block";
+    document.getElementById("ms_user").textContent = ("Hello, " + username);
     document.getElementById("wallpaper_user_id").textContent = ("Hello, " + username);
   
   }else{
-
-    var showFS = document.querySelector(".FS");
-    showFS.style.display ="";     
-      
+var aaa = true
+    if(aaa === true)
+    document.querySelector(".first_screen_check").style.display = "block";     
+    
+    document.getElementById("name_input_id").addEventListener("keypress", function(event){
+  
+      var what_name = document.getElementById("name_input_id").value;
+    
+      if(event.key === "Enter"){
+      setCookie("username", what_name, 365);
+      location.reload();
+      }
+      });
   }
 });
 
@@ -227,7 +235,6 @@ document.getElementById("text_box_shadow_id").addEventListener("keypress", funct
   document.querySelector(".task_bar").style.boxShadow = what_color_box_shadow;
   document.querySelector(".the_settings").style.boxShadow = what_color_box_shadow;
   document.querySelector(".settings_shortcut").style.boxShadow = what_color_box_shadow;
-  document.querySelector(".settings_shortcut input").style.boxShadow = what_color_box_shadow;
   document.querySelector(".the_visuals").style.boxShadow = what_color_box_shadow;
   document.querySelector(".visuals_the_background").style.boxShadow = what_color_box_shadow;
   document.querySelector(".the_text").style.boxShadow = what_color_box_shadow;
@@ -291,7 +298,53 @@ document.querySelector(".visuals_the_background").style.borderColor = what_color
 document.querySelector(".the_text").style.borderColor = what_color_border;
 document.querySelector(".shortcut_bar").style.borderColor = what_color_border;
 
+//border radius
 
+document.getElementById("text_border_radius_id").addEventListener("keypress", function(event){
+
+  if(event.key === "Enter"){
+  var what_border_radius = document.getElementById("text_border_radius_id").value +"px";
+  setCookie("border_radius", what_border_radius, 365);
+  document.querySelector(".task_bar").style.borderRadius = what_border_radius;
+  document.querySelector(".the_settings").style.borderRadius = what_border_radius;
+  document.querySelector(".the_visuals").style.borderRadius = what_border_radius;
+  document.querySelector(".settings_shortcut").style.borderRadius = what_border_radius;
+  document.querySelector(".visuals_the_background").style.borderRadius = what_border_radius;
+  document.querySelector(".the_text").style.borderRadius = what_border_radius;
+  document.querySelector(".shortcut_bar").style.borderRadius = what_border_radius;
+
+}
+})
+
+var what_border_radius = getCookie("border_radius");
+document.querySelector(".task_bar").style.borderRadius = what_border_radius;
+document.querySelector(".the_settings").style.borderRadius = what_border_radius;
+document.querySelector(".the_visuals").style.borderRadius = what_border_radius;
+document.querySelector(".settings_shortcut").style.borderRadius = what_border_radius;
+document.querySelector(".visuals_the_background").style.borderRadius = what_border_radius;
+document.querySelector(".the_text").style.borderRadius = what_border_radius;
+document.querySelector(".shortcut_bar").style.borderRadius = what_border_radius;
+
+//font style
+
+document.getElementById("text_font_style_id").addEventListener("keypress", function(event){
+
+  if(event.key === "Enter"){
+
+    var what_font_style = document.getElementById("text_font_style_id").value;
+    setCookie("font_style", what_font_style, 365);
+    var all = document.querySelectorAll("*");
+    all.forEach(element => {
+      element.style.fontFamily = '"' + what_font_style + '","Poppins",sans-serif';
+    })
+  }
+})
+
+var what_font_style = getCookie("font_style");
+var all = document.querySelectorAll("*");
+    all.forEach(element => {
+      element.style.fontFamily = '"' + what_font_style + '","Poppins",sans-serif';
+    })
 //Settings popup
 
 document.getElementById("open_settings_id").addEventListener("click", function(){
@@ -342,13 +395,13 @@ document.getElementById("shortcut_button_id").addEventListener("click", function
 //shortcut #1
   //from inout into a var
 
-document.getElementById("shortcut1_input").addEventListener("keypress", function(shortcut1){
+document.getElementById("shortcut1_input_id").addEventListener("keypress", function(event){
 
-  if(shortcut1.key === "Enter"){
+  if(event.key === "Enter"){
 
-    var shortcut1_stuff = document.getElementById("shortcut1_input").value;
-    let cname = shortcut1_stuff;
-    setCookie("shortcut_1_stuff", cname, 365);
+    var shortcut1_stuff = document.getElementById("shortcut1_input_id").value;
+    setCookie("shortcut_1_stuff", shortcut1_stuff, 365);
+    document.querySelector(".shortcut1_input").style.boxShadow = "0px 0px 5px 5px green"
 
   }
 })
@@ -360,19 +413,19 @@ document.getElementById("shortcut1_id").addEventListener("click", function(){
   let shortcut_1_cookie = getCookie("shortcut_1_stuff");
   window.location = shortcut_1_cookie;
 
+
 })
 
 //shortcut #2
   //from inout into a var
 
-document.getElementById("shortcut2_input").addEventListener("keypress", function(shortcut2){
+document.getElementById("shortcut2_input_id").addEventListener("keypress", function(shortcut2){
 
   if(shortcut2.key === "Enter"){
 
-    var shortcut2_stuff = document.getElementById("shortcut2_input").value;
-    let cname = shortcut2_stuff;
-    setCookie("shortcut_2_stuff", cname, 365);
-
+    var shortcut2_stuff = document.getElementById("shortcut2_input_id").value;
+    setCookie("shortcut_2_stuff", shortcut2_stuff, 365);
+    document.querySelector(".shortcut2_input").style.boxShadow = "0px 0px 5px 5px green";
   }
 })
 
@@ -388,13 +441,13 @@ document.getElementById("shortcut2_id").addEventListener("click", function(){
 //shortcut #3
   //from inout into a var
 
-document.getElementById("shortcut3_input").addEventListener("keypress", function(shortcut3){
+document.getElementById("shortcut3_input_id").addEventListener("keypress", function(event){
 
-  if (shortcut3.key === "Enter"){
+  if (event.key === "Enter"){
 
-    var shortcut3_stuff = document.getElementById("shortcut3_input").value;
-    let cname = shortcut3_stuff;
-    setCookie("shortcut_3_stuff", cname, 365);
+    var shortcut3_stuff = document.getElementById("shortcut3_input_id").value;
+    setCookie("shortcut_3_stuff", shortcut3_stuff, 365);
+    document.querySelector(".shortcut3_input").style.boxShadow = "0px 0px 5px 5px green";
 
   }
 })
@@ -411,13 +464,13 @@ document.getElementById("shortcut3_id").addEventListener("click", function(){
 //shortcut #4
   //from inout into a var
 
-document.getElementById("shortcut4_input").addEventListener("keypress", function(shortcut4){
+document.getElementById("shortcut4_input_id").addEventListener("keypress", function(event){
 
-  if(shortcut4.key === "Enter"){
+  if(event.key === "Enter"){
 
-    var shortcut4_stuff = document.getElementById("shortcut4_input").value;
-    let cname = shortcut4_stuff;
-    setCookie("shortcut_4_stuff", cname, 365);
+    var shortcut4_stuff = document.getElementById("shortcut4_input_id").value;
+    setCookie("shortcut_4_stuff", shortcut4_stuff, 365);
+    document.querySelector(".shortcut4_input").style.boxShadow = "0px 0px 5px 5px green";
 
   }
 });
@@ -434,13 +487,13 @@ document.getElementById("shortcut4_id").addEventListener("click", function(){
       //shortcut #5
   //from inout into a var
 
-document.getElementById("shortcut5_input").addEventListener("keypress", function(shortcut5){
+document.getElementById("shortcut5_input_id").addEventListener("keypress", function(shortcut5){
 
   if(shortcut5.key === "Enter"){
 
-    var shortcut5_stuff = document.getElementById("shortcut5_input").value;
-    let cname = shortcut5_stuff;
-    setCookie("shortcut_5_stuff", cname, 365);
+    var shortcut5_stuff = document.getElementById("shortcut5_input_id").value;
+    setCookie("shortcut_5_stuff", shortcut5_stuff, 365);
+    document.querySelector(".shortcut5_input").style.boxShadow = "0px 0px 5px 5px green";
 
   }
 });
@@ -521,23 +574,17 @@ if(document.getElementById("codefield_text_id").addEventListener("keypress", fun
   }
   
   if(newValue === "fs"){
-
-    var FS = document.querySelector(".FS");
-    var container = document.querySelector(".container");
   
-    container.style.display = "none";
-    FS.style.display = "";
+    document.querySelector(".container").style.display = "none";
+    document.querySelector(".first_screen_check").style.display = "block";
     event.target.value = "";
   
   }
 
   if(newValue === "ms"){
-
-    var FS = document.querySelector(".FS");
-    var container = document.querySelector(".container");
   
-    container.style.display = "";
-    FS.style.display = "none";
+    document.querySelector(".container").style.display = "block";
+    document.querySelector(".first_screen_check").style.display = "none";
     event.target.value = "";
   
   }
@@ -553,15 +600,20 @@ if(document.getElementById("codefield_text_id").addEventListener("keypress", fun
 
   if(newValue === "delallcookie"){
 
-    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "shortcut_5_stuff=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "shortcut_4_stuff=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "shortcut_3_stuff=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "shortcut_2_stuff=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "shortcut_1_stuff=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "color=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "outline_color=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "color_box_shadow=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "username=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "shortcut_5_stuff=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "shortcut_4_stuff=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "shortcut_3_stuff=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "shortcut_2_stuff=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "shortcut_1_stuff=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "color=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "outline_color=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "color_box_shadow=; expires= 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "color_text=; expires= 1 jan 1999 00:00:00"
+    document.cookie = "color_font_shadow=; expires=1  jan 1999 00:00:00"
+    document.cookie = "border_color=; expires=1 jan 1999 00:00:00"
+    
+    location.reload()
 
     event.target.value = "";
 
@@ -582,35 +634,7 @@ document.getElementById("master_ju_id").addEventListener("click", function(){
   })}
 }));
 
+// First screen
 
-document.getElementById("FS_remove_id").addEventListener("click", function(){
 
-var FS = document.querySelector(".FS");
-var container = document.querySelector(".container")
 
-container.style.display = ""
-FS.style.display = "none";
-
-});
-
-document.getElementById("FS_form_id").addEventListener("submit", function(event){
-  
-  var cname = document.getElementById("test_text_id").value;
-
-  event.preventDefault();
-  setCookie("username", cname, 365);
-  location.reload();
-
-  });
-
-document.getElementById("FullS_id").addEventListener("click",function(){
-
-  var elem = document.documentElement;
-
-  if(elem.requestFullscreen){
-    
-    elem.requestFullscreen();
-
-  }
-  
-});

@@ -1,8 +1,8 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /* codefield meme */
@@ -19,22 +19,15 @@
 }
 
 /* First screen */
-.FS_remove {
 
-    cursor: pointer;
-    box-sizing: border-box;
-    margin: 5px;
-
-}
-
-.FS_check {
+.first_screen_check{
 
     display: none;
     z-index: 9;
 
 }
 
-.FS {
+.first_screen{
 
     width: 100%;
     min-height: 100vh;
@@ -44,6 +37,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    min-height: 100vh;
 
 }
 
@@ -67,7 +62,9 @@
 
     position: absolute;
     top: 15%;
-    font-size: 20px;
+    font-size: 100%;
+    left: 40%;
+    width: 20%;
     
     color: transparent;
     text-shadow: 0px 0px 40px rgb(0, 42, 255);
@@ -91,6 +88,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    bottom: 10%;
 
     border-color: rgb(251, 251, 251);
     border-width: 2px;
@@ -139,7 +137,7 @@
 .settings_box button{
     
     color: white;
-    font-size: 20px;
+    font-size: 150%;
     text-align: center;
     display: block;
     cursor: pointer;
@@ -181,7 +179,6 @@
 .settings_shortcut input{
 
     margin-bottom: 10%;
-    box-shadow: 0px 0px 5px 5px rgb(0, 42, 255);
     border-color: white;
     border-width: 2px;
     background: transparent;
@@ -203,6 +200,31 @@
     color: white;
 
 }
+
+    /*stuff*/
+
+.the_stuff{
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
+    height: 80%;
+    width: 13%;
+    position: absolute;
+    left: 7%;
+    bottom: 10%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border-color: rgb(251, 251, 251);
+    border-width: 2px;
+    border-style: solid;
+    box-shadow:  0px 0px 10px 5px rgb(0, 42, 255);
+
+}
+
+.the_stuff_check
     /* Visuals */
 
 .open_visuals {
@@ -244,7 +266,7 @@
 .the_visuals button{
     
     color: white;
-    font-size: 20px;
+    font-size: 150%;
     text-align: center;
     display: block;
     cursor: pointer;
@@ -286,14 +308,14 @@
 .visuals_the_background p{
 
     margin: 10px;
-    font-size: 20px;
+    font-size: 150%;
 
 }
 
 .visuals_the_background p1{
 
     margin: 10px;
-    font-size: 20px;
+    font-size: 150%;
     font-style: italic;
 
 }
@@ -301,7 +323,7 @@
 .visuals_the_background button{
     
     color: white;
-    font-size: 20px;
+    font-size: 150%;
     text-align: center;
     display: block;
     cursor: pointer;
@@ -320,7 +342,7 @@
     left: 22%;
     bottom: 10%;
     color: white;
-    
+    font-size: 150%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -354,7 +376,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    bottom: 10%;
+
     border-color: rgb(251, 251, 251);
     border-width: 2px;
     border-style: solid;
@@ -372,6 +395,8 @@
         background-size: cover;
 
     }
+    
+   
 
       /* shortcut#2 */
     
