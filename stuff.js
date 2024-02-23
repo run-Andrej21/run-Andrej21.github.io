@@ -42,15 +42,73 @@ document.addEventListener("DOMContentLoaded", function (){
 
   if(username != "") {
     
+    document.querySelector(".first_screen_check").style.display = "none"; 
     document.querySelector(".container").style.display = "block";
     document.getElementById("ms_user").textContent = ("Hello, " + username);
     document.getElementById("wallpaper_user_id").textContent = ("Hello, " + username);
   
   }else{
-var aaa = true
-    if(aaa === true)
-    document.querySelector(".first_screen_check").style.display = "block";     
+
+    //kb auf first screen maaaaaaaaaan
+    var aaa = true
+
+    if(aaa === true){
     
+      let id1 = setInterval(frame1, 5);
+      let alpha1 = 1;
+
+      function frame1(){
+
+        if(alpha1 == 0){
+          clearInterval(id1)
+        }else{
+          alpha1 -=0.005;
+          document.querySelector(".first_screen").style.backgroundImage = "linear-gradient(to center, rgba(25, 0, 255, " + alpha1 + "), rgba(39, 193, 245, " + alpha1 + "));";
+        }
+      }
+
+      document.querySelector(".first_screen_check").style.display = "block";  
+      document.getElementById("start_id").addEventListener("click", function(){
+      document.querySelector(".first_screen_check").requestFullscreen();
+
+    //animations
+
+
+      /*  
+    let id1 = setInterval(frame1, 5);
+    let alpha1 = 1;
+
+    function frame1(){
+      if(alpha == 0){
+        clearInterval(id1);
+      }else{
+        alpha1 -= 0.005;
+        document.querySelector(".first_text1").style.color = "rgba(255, 255, 255, " + alpha + ")";
+      }
+    }
+
+    
+   
+    let id = setInterval(frame, 5);
+    let alpha = 1;
+
+    function frame(){
+      if(alpha == 0){
+        clearInterval(id);
+      }else{
+        alpha -= 0.005;
+        document.querySelector(".first_text2").style.color = "rgba(255, 255, 255, " + alpha + ")";
+      }
+    }
+    */
+
+
+
+
+    });
+    
+  
+    /*
     document.getElementById("name_input_id").addEventListener("keypress", function(event){
   
       var what_name = document.getElementById("name_input_id").value;
@@ -59,9 +117,11 @@ var aaa = true
       setCookie("username", what_name, 365);
       location.reload();
       }
-      });
-  }
-});
+    
+      }); */
+      }
+      
+}});
 
 document.getElementById("del_name_id").addEventListener("click", function(){
 
