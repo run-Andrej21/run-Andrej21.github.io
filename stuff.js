@@ -180,7 +180,7 @@ let what_time = getCookie("what_time");
 
 document.getElementById("ms_user").textContent = (what_time + " " + username);
 document.getElementById("wallpaper_user_id").textContent = (what_time + " " + username);
-
+document.getElementById("first_text2_id").textContent = (what_time + " Sir. Shall we?")
 
 document.getElementById("del_name_id").addEventListener("click", function(){
 
@@ -267,7 +267,6 @@ document.getElementById("change_background_id").addEventListener("click", functi
     document.querySelector(".the_text_check").style.display = "none";
     document.getElementById("visuals_text_button_id").classList.remove("opened");
 
- 
   }else{
 
     visuals_background_overlay.style.display = "none";
@@ -275,7 +274,6 @@ document.getElementById("change_background_id").addEventListener("click", functi
 
     document.querySelector(".the_text_check").style.display = "none";
     document.getElementById("visuals_text_button_id").classList.remove("opened");
-
 
   }
 });
@@ -563,7 +561,7 @@ document.getElementById("open_stuff_id").addEventListener("click", function(){
 
     visuals_overlay.style.display = "none";
     visuals.classList.remove("opened");
-    
+
   }else{
 
     stuff.classList.remove("opened")
@@ -791,7 +789,9 @@ if(document.getElementById("codefield_text_id").addEventListener("keypress", fun
     document.cookie = "color_text=; expires= 1 jan 1999 00:00:00"
     document.cookie = "color_font_shadow=; expires=1  jan 1999 00:00:00"
     document.cookie = "border_color=; expires=1 jan 1999 00:00:00"
-    
+    document.cookie = "what_time=; expires= 1 jan 2000 00:00:00"
+    document.cookie = "font_style=; expires= 1 jan 2000 00:00:00"
+
     location.reload()
     event.target.value = "";
 
