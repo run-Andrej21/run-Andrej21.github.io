@@ -38,14 +38,12 @@ function getCookie(cname){
 
 document.addEventListener("DOMContentLoaded", function (){
 
-  let username = getCookie("username");
+  document.cookie = "what_time=; expires= 1 jan 1900 00:00:00"
 
   if(username != "") {
     
     document.querySelector(".first_screen_check").style.display = "none"; 
     document.querySelector(".container").style.display = "block";
-    document.getElementById("ms_user").textContent = ("Hello, " + username);
-    document.getElementById("wallpaper_user_id").textContent = ("Hello, " + username);
   
   }else{
 
@@ -54,74 +52,135 @@ document.addEventListener("DOMContentLoaded", function (){
 
     if(aaa === true){
     
-      let id1 = setInterval(frame1, 5);
-      let alpha1 = 1;
+      document.querySelector(".first_screen_check").style.display = "block";  
 
-      function frame1(){
-
-        if(alpha1 == 0){
-          clearInterval(id1)
+      // show act 1
+      let id = setInterval(frame, 5);
+      let alpha = 0;
+  
+      document.getElementById("start_id").style.display = "block";
+      document.getElementById("first_text2_id").style.display = "block";
+      function frame(){
+        if(alpha > 1){
+          clearInterval(id);
         }else{
-          alpha1 -=0.005;
-          document.querySelector(".first_screen").style.backgroundImage = "linear-gradient(to center, rgba(25, 0, 255, " + alpha1 + "), rgba(39, 193, 245, " + alpha1 + "));";
+          alpha += 0.005;
+          document.querySelector(".first_text2").style.color = "rgba(255, 255, 255, " + alpha + ")";
+          document.getElementById("start_id").style.color = "rgba(255, 255, 255, " + alpha + ")";
         }
       }
 
-      document.querySelector(".first_screen_check").style.display = "block";  
       document.getElementById("start_id").addEventListener("click", function(){
       document.querySelector(".first_screen_check").requestFullscreen();
+      document.querySelector(".first_screen").style.display = "block";
 
-    //animations
+      // act 3
+      let id3 = setInterval(frame3, 5);
+          let alpha3 = 0;
+  
+          function frame3(){
+          if(alpha3 > 1){
+            clearInterval(id3);
 
+            document.getElementById("name_input_id").addEventListener("keypress", function(event){
 
-      /*  
-    let id1 = setInterval(frame1, 5);
-    let alpha1 = 1;
+              if(event.key == "Enter"){
 
-    function frame1(){
-      if(alpha == 0){
-        clearInterval(id1);
-      }else{
-        alpha1 -= 0.005;
-        document.querySelector(".first_text1").style.color = "rgba(255, 255, 255, " + alpha + ")";
+                var name = document.getElementById("name_input_id").value;
+                setCookie("username", name, 365);
+                location.reload();
+              }
+            })
+
+          }else{
+            alpha3 += 0.005;
+            document.querySelector(".first_screen").style.backgroundColor = "rgba(27, 73, 255, " + alpha3 + ")";
+
+          }
+            }
+
+    // not show act 1 
+      let id1 = setInterval(frame1, 5);
+      let alpha1 = 1;
+  
+      function frame1(){
+        if(alpha1 < 0){
+          clearInterval(id1);
+          document.getElementById("start_id").style.display = "none";
+          document.getElementById("first_text2_id").style.display = "none";
+
+          //show act 2
+          document.getElementById("name_input_id").style.display = "block";
+          document.getElementById("first_text1_id").style.display = "block";
+
+          let id2 = setInterval(frame2, 5);
+          let alpha2 = 0;
+  
+          function frame2(){
+          if(alpha2 > 1){
+            clearInterval(id2);
+
+          }else{
+            alpha2 += 0.005;
+            document.querySelector(".first_text1").style.color = "rgba(255, 255, 255, " + alpha2 + ")";
+            document.getElementById("name_input_id").style.color = "rgba(255, 255, 255, " + alpha2 + ")";
+          }
+            }
+
+          //act 2 end 
+          
+        }else{
+          alpha1 -= 0.005;
+          document.querySelector(".first_text2").style.color = "rgba(255, 255, 255, " + alpha1 + ")";
+          document.getElementById("start_id").style.color = "rgba(255, 255, 255, " + alpha1 + ")";
+        }
       }
-    }
 
-    
-   
-    let id = setInterval(frame, 5);
-    let alpha = 1;
-
-    function frame(){
-      if(alpha == 0){
-        clearInterval(id);
-      }else{
-        alpha -= 0.005;
-        document.querySelector(".first_text2").style.color = "rgba(255, 255, 255, " + alpha + ")";
-      }
-    }
-    */
-
-
-
-
+      // act 1 end
     });
-    
-  
-    /*
-    document.getElementById("name_input_id").addEventListener("keypress", function(event){
-  
-      var what_name = document.getElementById("name_input_id").value;
-    
-      if(event.key === "Enter"){
-      setCookie("username", what_name, 365);
-      location.reload();
-      }
-    
-      }); */
       }
       
 }});
+
+  //Time
+
+  let time = document.getElementById("HowTFDoIMakeTime_id");
+
+  setInterval(() =>{
+        
+  let d = new Date();
+  time.innerText = d.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false});
+        
+  var element = document.getElementById(("HowTFDoIMakeTime_id"));
+  
+  if(true == true){
+    if(element.innerText >= "00:00:00" && element.innerText <= "12:59:59"){
+  
+    document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
+    setCookie("what_time", "Good morning, ", 365);
+  }
+  
+  if(element.innerText >= "12:00:00" && element.innerText <= "17:59:59"){
+  
+    document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
+    setCookie("what_time", "Good afternoon, ", 365);
+  
+  }
+  
+  if(element.innerText >= "18:00:00" && element.innerText <= "23:59:59"){
+  
+    document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
+    setCookie("what_time", "Good evening, ", 365)
+  }
+  }
+  });
+
+let username = getCookie("username");
+let what_time = getCookie("what_time");
+
+document.getElementById("ms_user").textContent = (what_time + " " + username);
+document.getElementById("wallpaper_user_id").textContent = (what_time + " " + username);
+
 
 document.getElementById("del_name_id").addEventListener("click", function(){
 
@@ -130,19 +189,7 @@ document.getElementById("del_name_id").addEventListener("click", function(){
   
 });
 
-//Time
-
-let time = document.getElementById("HowTFDoIMakeTime_id");
-
-setInterval(() =>{
-      
-let d = new Date();
-time.innerText = d.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false});
-      
-});
-
 //Taskbar start
-
 //settings
 
 var settings_overlay = document.querySelector(".settings_check");
@@ -157,6 +204,17 @@ var visuals = document.getElementById("open_visuals_id");
 
 var settings_shortcut_overlay = document.querySelector(".settings_shortcut_check");
 var settings_shortcut = document.getElementById("settings_shortcut_id");
+
+//visuals // background
+
+var visuals_background_overlay = document.querySelector(".visuals_background_check")
+var visuals_the_background = document.getElementById("change_background_id")
+
+// stuff
+
+var stuff_overlay = document.querySelector(".the_stuff_check")
+var stuff = document.getElementById("the_stuff_id")
+
 
 //Visuals popup
 
@@ -173,34 +231,51 @@ document.getElementById("open_visuals_id").addEventListener("click", function(){
     visuals_overlay.style.display = "block";
     visuals.classList.add("opened");
 
+    stuff.classList.remove("opened")
+    stuff_overlay.style.display = "none";
+
+    visuals_background_overlay.style.display = "none";
+    visuals_the_background.classList.remove("opened");
+
+    document.querySelector(".the_text_check").style.display = "none";
+    document.getElementById("visuals_text_button_id").classList.remove("opened");
+
   }else{
 
     visuals_overlay.style.display = "none";
     visuals.classList.remove("opened");
+
+    visuals_background_overlay.style.display = "none";
+    visuals_the_background.classList.remove("opened");
+
+    document.querySelector(".the_text_check").style.display = "none";
+    document.getElementById("visuals_text_button_id").classList.remove("opened");
 
   }
 });
 
 //visuals stuff
 
-// visuals / background
+// visuals // background
 document.getElementById("change_background_id").addEventListener("click", function(){
-
-  var visuals_background_overlay = document.querySelector(".visuals_background_check")
-  var visuals_the_background = document.getElementById("change_background_id")
 
   if(! visuals_the_background.classList.contains("opened")){
     
+    visuals_background_overlay.style.display = "block";
+    visuals_the_background.classList.add("opened");
+
     document.querySelector(".the_text_check").style.display = "none";
     document.getElementById("visuals_text_button_id").classList.remove("opened");
 
-    visuals_background_overlay.style.display = "block";
-    visuals_the_background.classList.add("opened");
  
   }else{
 
     visuals_background_overlay.style.display = "none";
     visuals_the_background.classList.remove("opened");
+
+    document.querySelector(".the_text_check").style.display = "none";
+    document.getElementById("visuals_text_button_id").classList.remove("opened");
+
 
   }
 });
@@ -405,6 +480,7 @@ var all = document.querySelectorAll("*");
     all.forEach(element => {
       element.style.fontFamily = '"' + what_font_style + '","Poppins",sans-serif';
     })
+
 //Settings popup
 
 document.getElementById("open_settings_id").addEventListener("click", function(){
@@ -419,6 +495,15 @@ document.getElementById("open_settings_id").addEventListener("click", function()
 
     settings_shortcut_overlay.style.display = "none";
     settings_shortcut.classList.remove("opened");
+
+    stuff.classList.remove("opened")
+    stuff_overlay.style.display = "none";
+
+    visuals_background_overlay.style.display = "none";
+    visuals_the_background.classList.remove("opened");
+
+    document.querySelector(".the_text_check").style.display = "none";
+    document.getElementById("visuals_text_button_id").classList.remove("opened");
 
   }else{
 
@@ -445,11 +530,46 @@ document.getElementById("shortcut_button_id").addEventListener("click", function
     settings_shortcut_overlay.style.display = "block";
     settings_shortcut.classList.add("opened");
 
+    stuff.classList.remove("opened")
+    stuff_overlay.style.display = "none";
+
   }else{
 
     settings_shortcut_overlay.style.display = "none";
     settings_shortcut.classList.remove("opened");
   }
+})
+
+//stuff
+
+document.getElementById("open_stuff_id").addEventListener("click", function(){
+
+  if(! stuff.classList.contains("opened")){
+
+    stuff.classList.add("opened");
+    stuff_overlay.style.display = "block";
+
+    visuals_background_overlay.style.display = "none";
+    visuals_the_background.classList.remove("opened");
+
+    document.querySelector(".the_text_check").style.display = "none";
+    document.getElementById("visuals_text_button_id").classList.remove("opened");
+
+    settings_shortcut_overlay.style.display = "none";
+    settings_shortcut.classList.remove("opened");
+
+    settings.classList.remove("opened");
+    settings_overlay.style.display = "none";
+
+    visuals_overlay.style.display = "none";
+    visuals.classList.remove("opened");
+    
+  }else{
+
+    stuff.classList.remove("opened")
+    stuff_overlay.style.display = "none";
+  }
+
 })
 
 //shortcut #1
@@ -623,7 +743,6 @@ if(document.getElementById("codefield_text_id").addEventListener("keypress", fun
 
   if(event.key === "Enter"){
     
-    console.log("a")
     const newValue = event.target.value;
 
   if(newValue === "21"){
@@ -674,7 +793,6 @@ if(document.getElementById("codefield_text_id").addEventListener("keypress", fun
     document.cookie = "border_color=; expires=1 jan 1999 00:00:00"
     
     location.reload()
-
     event.target.value = "";
 
   };
