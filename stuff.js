@@ -833,8 +833,3 @@ document.getElementById("master_ju_id").addEventListener("click", function(){
 
   })}
 }));
-
-// First screen
-
-
-
