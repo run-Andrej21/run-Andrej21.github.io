@@ -236,7 +236,6 @@ var visuals_the_background = document.getElementById("change_background_id")
 var stuff_overlay = document.querySelector(".the_stuff_check")
 var stuff = document.getElementById("the_stuff_id")
 
-
 //Visuals popup
 
 document.getElementById("open_visuals_id").addEventListener("click", function(){
@@ -299,7 +298,6 @@ document.getElementById("change_background_id").addEventListener("click", functi
   }
 });
 
-
 document.getElementById("wallpaper_copy_id").addEventListener("click", function(){
 
   var copy_that = document.getElementById("copy_that_id");
@@ -310,6 +308,7 @@ document.getElementById("wallpaper_copy_id").addEventListener("click", function(
   document.getElementById("copy_that_id").style.display = "none";}, 2000);
 
   })
+
 //visuals / text
 
 document.getElementById("visuals_text_button_id").addEventListener("click", function(){
