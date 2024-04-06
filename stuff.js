@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function (){
     if(element.innerText >= "00:00:00" && element.innerText <= "11:59:59"){
   
     document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
-    setCookie("what_time", "Good morning, ", 365);
+    setCookie("what_time", "Good Morning, ", 365);
     let username = getCookie("username");
     let what_time = getCookie("what_time");
 
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function (){
   if(element.innerText >= "12:00:00" && element.innerText <= "17:59:59"){
   
     document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
-    setCookie("what_time", "Good afternoon, ", 365);
+    setCookie("what_time", "Good Afternoon, ", 365);
     let username = getCookie("username");
     let what_time = getCookie("what_time");
 
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function (){
   if(element.innerText >= "18:00:00" && element.innerText <= "23:59:59"){
   
     document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
-    setCookie("what_time", "Good evening, ", 365)
+    setCookie("what_time", "Good Evening, ", 365)
 
     let username = getCookie("username");
     let what_time = getCookie("what_time");
@@ -589,121 +589,6 @@ document.getElementById("open_stuff_id").addEventListener("click", function(){
   }
 
 })
-
-//shortcut #1
-  //from inout into a var
-
-document.getElementById("shortcut1_input_id").addEventListener("keypress", function(event){
-
-  if(event.key === "Enter"){
-
-    var shortcut1_stuff = document.getElementById("shortcut1_input_id").value;
-    setCookie("shortcut_1_stuff", shortcut1_stuff, 365);
-    document.querySelector(".shortcut1_input").style.boxShadow = "0px 0px 5px 5px green"
-
-  }
-})
-
-//if button
-
-document.getElementById("shortcut1_id").addEventListener("click", function(){
-
-  let shortcut_1_cookie = getCookie("shortcut_1_stuff");
-  window.location = shortcut_1_cookie;
-
-
-})
-
-//shortcut #2
-  //from inout into a var
-
-document.getElementById("shortcut2_input_id").addEventListener("keypress", function(shortcut2){
-
-  if(shortcut2.key === "Enter"){
-
-    var shortcut2_stuff = document.getElementById("shortcut2_input_id").value;
-    setCookie("shortcut_2_stuff", shortcut2_stuff, 365);
-    document.querySelector(".shortcut2_input").style.boxShadow = "0px 0px 5px 5px green";
-  }
-})
-
-//if button
-
-document.getElementById("shortcut2_id").addEventListener("click", function(){
-
-  let shortcut_2_cookie = getCookie("shortcut_2_stuff");
-  window.location = shortcut_2_cookie;
-
-})
-      
-//shortcut #3
-  //from inout into a var
-
-document.getElementById("shortcut3_input_id").addEventListener("keypress", function(event){
-
-  if (event.key === "Enter"){
-
-    var shortcut3_stuff = document.getElementById("shortcut3_input_id").value;
-    setCookie("shortcut_3_stuff", shortcut3_stuff, 365);
-    document.querySelector(".shortcut3_input").style.boxShadow = "0px 0px 5px 5px green";
-
-  }
-})
-
-//if button
-
-document.getElementById("shortcut3_id").addEventListener("click", function(){
-
-  let shortcut_3_cookie = getCookie("shortcut_3_stuff");
-  window.location = shortcut_3_cookie;
-
-});
-      
-//shortcut #4
-  //from inout into a var
-
-document.getElementById("shortcut4_input_id").addEventListener("keypress", function(event){
-
-  if(event.key === "Enter"){
-
-    var shortcut4_stuff = document.getElementById("shortcut4_input_id").value;
-    setCookie("shortcut_4_stuff", shortcut4_stuff, 365);
-    document.querySelector(".shortcut4_input").style.boxShadow = "0px 0px 5px 5px green";
-
-  }
-});
-
-//if button
-
-document.getElementById("shortcut4_id").addEventListener("click", function(){
-
-  let shortcut_4_cookie = getCookie("shortcut_4_stuff");
-  window.location = shortcut_4_cookie;
-
-});
-
-      //shortcut #5
-  //from inout into a var
-
-document.getElementById("shortcut5_input_id").addEventListener("keypress", function(shortcut5){
-
-  if(shortcut5.key === "Enter"){
-
-    var shortcut5_stuff = document.getElementById("shortcut5_input_id").value;
-    setCookie("shortcut_5_stuff", shortcut5_stuff, 365);
-    document.querySelector(".shortcut5_input").style.boxShadow = "0px 0px 5px 5px green";
-
-  }
-});
-
-//if button
-
-document.getElementById("shortcut5_id").addEventListener("click", function(){
-
-  let shortcut_5_cookie = getCookie("shortcut_5_stuff");
-  window.location = shortcut_5_cookie;
-
-});
 
 //codefield
 
