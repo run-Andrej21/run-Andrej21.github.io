@@ -1,4 +1,5 @@
-  //Basic Cookie
+
+
 function setCookie(cname, cvalue, exdays){
 
   const d = new Date();
@@ -9,7 +10,7 @@ function setCookie(cname, cvalue, exdays){
 }
 
 function getCookie(cname){
-  
+
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(';');
@@ -34,8 +35,166 @@ function getCookie(cname){
     return "";
 
 }
-  
 
+document.addEventListener("DOMContentLoaded", function (){
+
+  document.cookie = "what_time=; expires= 1 jan 1900 00:00:00"
+
+  if(username != "") {
+    
+    document.querySelector(".first_screen_check").style.display = "none"; 
+    document.querySelector(".container").style.display = "block";
+  
+  }else{
+
+    //kb auf first screen maaaaaaaaaan
+    var aaa = true
+
+    if(aaa === true){
+    
+      document.querySelector(".first_screen_check").style.display = "block";  
+
+      // show act 1
+      let id = setInterval(frame, 5);
+      let alpha = 0;
+  
+      document.getElementById("start_id").style.display = "block";
+      document.getElementById("first_text2_id").style.display = "block";
+      function frame(){
+        if(alpha > 1){
+          clearInterval(id);
+        }else{
+          alpha += 0.005;
+          document.querySelector(".first_text2").style.color = "rgba(255, 255, 255, " + alpha + ")";
+          document.getElementById("start_id").style.color = "rgba(255, 255, 255, " + alpha + ")";
+        }
+      }
+
+      document.getElementById("start_id").addEventListener("click", function(){
+      document.querySelector(".first_screen_check").requestFullscreen();
+      document.querySelector(".first_screen").style.display = "block";
+
+      // act 3
+      let id3 = setInterval(frame3, 5);
+          let alpha3 = 0;
+  
+          function frame3(){
+          if(alpha3 > 1){
+            clearInterval(id3);
+
+            document.getElementById("name_input_id").addEventListener("keypress", function(event){
+
+              if(event.key == "Enter"){
+
+                var name = document.getElementById("name_input_id").value;
+                setCookie("username", name, 365);
+                location.reload();
+              }
+            })
+
+          }else{
+            alpha3 += 0.005;
+            document.querySelector(".first_screen").style.backgroundColor = "rgba(27, 73, 255, " + alpha3 + ")";
+
+          }
+            }
+
+    // not show act 1 
+      let id1 = setInterval(frame1, 5);
+      let alpha1 = 1;
+  
+      function frame1(){
+        if(alpha1 < 0){
+          clearInterval(id1);
+          document.getElementById("start_id").style.display = "none";
+          document.getElementById("first_text2_id").style.display = "none";
+
+          //show act 2
+          document.getElementById("name_input_id").style.display = "block";
+          document.getElementById("first_text1_id").style.display = "block";
+
+          let id2 = setInterval(frame2, 5);
+          let alpha2 = 0;
+  
+          function frame2(){
+          if(alpha2 > 1){
+            clearInterval(id2);
+
+          }else{
+            alpha2 += 0.005;
+            document.querySelector(".first_text1").style.color = "rgba(255, 255, 255, " + alpha2 + ")";
+            document.getElementById("name_input_id").style.color = "rgba(255, 255, 255, " + alpha2 + ")";
+          }
+            }
+
+          //act 2 end 
+          
+        }else{
+          alpha1 -= 0.005;
+          document.querySelector(".first_text2").style.color = "rgba(255, 255, 255, " + alpha1 + ")";
+          document.getElementById("start_id").style.color = "rgba(255, 255, 255, " + alpha1 + ")";
+        }
+      }
+
+      // act 1 end
+    });
+      }
+      
+}});
+
+  //Time
+
+  let time = document.getElementById("HowTFDoIMakeTime_id");
+
+  setInterval(() =>{
+        
+  let d = new Date();
+  time.innerText = d.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false});
+        
+  var element = document.getElementById(("HowTFDoIMakeTime_id"));
+  
+  if(true == true){
+    if(element.innerText >= "00:00:00" && element.innerText <= "11:59:59"){
+  
+    document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
+    setCookie("what_time", "Good morning, ", 365);
+    let username = getCookie("username");
+    let what_time = getCookie("what_time");
+
+    document.getElementById("ms_user").textContent = (what_time + " " + username);
+    document.getElementById("wallpaper_user_id").textContent = (what_time + " " + username);
+    document.getElementById("first_text2_id").textContent = (what_time + " Sir. Shall we?")
+
+  }
+  
+  if(element.innerText >= "12:00:00" && element.innerText <= "17:59:59"){
+  
+    document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
+    setCookie("what_time", "Good afternoon, ", 365);
+    let username = getCookie("username");
+    let what_time = getCookie("what_time");
+
+    document.getElementById("ms_user").textContent = (what_time + " " + username);
+    document.getElementById("wallpaper_user_id").textContent = (what_time + " " + username);
+    document.getElementById("first_text2_id").textContent = (what_time + " Sir. Shall we?")
+
+  }
+  
+  if(element.innerText >= "18:00:00" && element.innerText <= "23:59:59"){
+  
+    document.cookie = "what_time=; expires=1 jan 1999 00:00:00";
+    setCookie("what_time", "Good evening, ", 365)
+
+    let username = getCookie("username");
+    let what_time = getCookie("what_time");
+
+    document.getElementById("ms_user").textContent = (what_time + " " + username);
+    document.getElementById("wallpaper_user_id").textContent = (what_time + " " + username);
+    document.getElementById("first_text2_id").textContent = (what_time + " Sir. Shall we?")
+
+  }
+  }
+  });
 
 let username = getCookie("username");
 let what_time = getCookie("what_time");
@@ -430,6 +589,121 @@ document.getElementById("open_stuff_id").addEventListener("click", function(){
   }
 
 })
+
+//shortcut #1
+  //from inout into a var
+
+document.getElementById("shortcut1_input_id").addEventListener("keypress", function(event){
+
+  if(event.key === "Enter"){
+
+    var shortcut1_stuff = document.getElementById("shortcut1_input_id").value;
+    setCookie("shortcut_1_stuff", shortcut1_stuff, 365);
+    document.querySelector(".shortcut1_input").style.boxShadow = "0px 0px 5px 5px green"
+
+  }
+})
+
+//if button
+
+document.getElementById("shortcut1_id").addEventListener("click", function(){
+
+  let shortcut_1_cookie = getCookie("shortcut_1_stuff");
+  window.location = shortcut_1_cookie;
+
+
+})
+
+//shortcut #2
+  //from inout into a var
+
+document.getElementById("shortcut2_input_id").addEventListener("keypress", function(shortcut2){
+
+  if(shortcut2.key === "Enter"){
+
+    var shortcut2_stuff = document.getElementById("shortcut2_input_id").value;
+    setCookie("shortcut_2_stuff", shortcut2_stuff, 365);
+    document.querySelector(".shortcut2_input").style.boxShadow = "0px 0px 5px 5px green";
+  }
+})
+
+//if button
+
+document.getElementById("shortcut2_id").addEventListener("click", function(){
+
+  let shortcut_2_cookie = getCookie("shortcut_2_stuff");
+  window.location = shortcut_2_cookie;
+
+})
+      
+//shortcut #3
+  //from inout into a var
+
+document.getElementById("shortcut3_input_id").addEventListener("keypress", function(event){
+
+  if (event.key === "Enter"){
+
+    var shortcut3_stuff = document.getElementById("shortcut3_input_id").value;
+    setCookie("shortcut_3_stuff", shortcut3_stuff, 365);
+    document.querySelector(".shortcut3_input").style.boxShadow = "0px 0px 5px 5px green";
+
+  }
+})
+
+//if button
+
+document.getElementById("shortcut3_id").addEventListener("click", function(){
+
+  let shortcut_3_cookie = getCookie("shortcut_3_stuff");
+  window.location = shortcut_3_cookie;
+
+});
+      
+//shortcut #4
+  //from inout into a var
+
+document.getElementById("shortcut4_input_id").addEventListener("keypress", function(event){
+
+  if(event.key === "Enter"){
+
+    var shortcut4_stuff = document.getElementById("shortcut4_input_id").value;
+    setCookie("shortcut_4_stuff", shortcut4_stuff, 365);
+    document.querySelector(".shortcut4_input").style.boxShadow = "0px 0px 5px 5px green";
+
+  }
+});
+
+//if button
+
+document.getElementById("shortcut4_id").addEventListener("click", function(){
+
+  let shortcut_4_cookie = getCookie("shortcut_4_stuff");
+  window.location = shortcut_4_cookie;
+
+});
+
+      //shortcut #5
+  //from inout into a var
+
+document.getElementById("shortcut5_input_id").addEventListener("keypress", function(shortcut5){
+
+  if(shortcut5.key === "Enter"){
+
+    var shortcut5_stuff = document.getElementById("shortcut5_input_id").value;
+    setCookie("shortcut_5_stuff", shortcut5_stuff, 365);
+    document.querySelector(".shortcut5_input").style.boxShadow = "0px 0px 5px 5px green";
+
+  }
+});
+
+//if button
+
+document.getElementById("shortcut5_id").addEventListener("click", function(){
+
+  let shortcut_5_cookie = getCookie("shortcut_5_stuff");
+  window.location = shortcut_5_cookie;
+
+});
 
 //codefield
 
